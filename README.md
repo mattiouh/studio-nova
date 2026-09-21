@@ -2,6 +2,8 @@
 
 **Independent Concept / Portfolio Project** — website concept for a fictional international architecture and interior design practice. Created as a high-end web design and front-end case study for ByPalombi.
 
+**Live demo:** https://studio-nova-bof.pages.dev
+
 ## Concept — Quiet Monumentality
 
 STUDIO NÒVA does not compete for attention through visual noise. It uses generous negative space, type with a strong editorial presence and materially rich photography to make each room feel considered before it is explained. The point of view is *quiet monumentality*: spaces that are memorable because they are precise, tactile and calm.
