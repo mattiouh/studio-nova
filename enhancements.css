@@ -1,0 +1,10 @@
+/* Motion is intentionally limited and respects the visitor's system preference. */
+.page-enter { animation: nova-page-in .5s cubic-bezier(.2,.75,.25,1) both; }
+@keyframes nova-page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .loader { display: none; }
+  .page-enter, .hero-media img { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
