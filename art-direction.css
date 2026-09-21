@@ -1,0 +1,149 @@
+/* A second typographic layer: each editorial moment gets its own voice. */
+:root { --edge: clamp(1.25rem, 3vw, 3.5rem); --section-space: clamp(5.5rem, 10vw, 10rem); }
+body { font-size: clamp(.9rem, .78rem + .18vw, 1rem); }
+.header { padding-inline: var(--edge); }
+.header .brand { font-family: var(--serif); font-size: clamp(1.35rem, 1.15rem + .3vw, 1.65rem); }
+.hero { padding: clamp(1rem, 2.4vw, 2.8rem) var(--edge); }
+.hero h1 { max-width: 7.4ch; font-family: var(--serif); font-weight: 600; }
+.hero .eyebrow { font-family: var(--mono); letter-spacing: .16em; }
+.hero-caption { font-size: .62rem; letter-spacing: .12em; }
+section { padding: var(--section-space) var(--edge); }
+.manifesto { padding-block: clamp(6rem, 12vw, 13rem); }
+.manifesto h2 { max-width: 11ch; font-family: var(--serif); font-weight: 500; }
+.manifesto p, .detail-intro p, .about-grid p { font-size: clamp(1rem, .84rem + .25vw, 1.22rem); line-height: 1.62; }
+.section-top .eyebrow, .services .eyebrow { font-family: var(--mono); letter-spacing: .15em; }
+.project-name { font-size: clamp(1.55rem, 1.25rem + .5vw, 2.15rem); }
+.project-meta, .fact span, .metric span { font-family: var(--mono); }
+.services h3 { font-weight: 500; }
+.services .service:nth-child(even) h3 { font-style: italic; }
+.approach h2 { max-width: 9.7ch; font-weight: 600; }
+.step h3 { font-family: var(--sans); font-size: clamp(1.15rem, 1rem + .28vw, 1.55rem); font-weight: 500; letter-spacing: -.035em; }
+.step p { font-size: .94rem; line-height: 1.65; }
+
+/* The expertise data is deliberately not a uniform KPI strip. */
+.numbers { margin: 0; }
+.metric { min-height: clamp(13rem, 21vw, 20rem); display: flex; flex-direction: column; justify-content: space-between; padding: clamp(1.45rem, 3vw, 3.4rem) clamp(1rem, 2vw, 2.25rem); }
+.metric strong { font-size: clamp(3.2rem, 6vw, 7.5rem); }
+main[data-page="home"] .metric:nth-child(1) strong { font-family: var(--serif); font-style: italic; font-size: clamp(4rem, 7.4vw, 9rem); }
+main[data-page="home"] .metric:nth-child(2) strong { font-family: var(--sans); font-size: clamp(3.5rem, 6vw, 7rem); font-weight: 500; letter-spacing: -.1em; }
+main[data-page="home"] .metric:nth-child(3) strong { font-family: var(--mono); font-size: clamp(2.7rem, 4.7vw, 5.4rem); font-weight: 400; letter-spacing: -.12em; }
+main[data-page="home"] .metric:nth-child(4) strong { font-family: var(--serif); font-size: clamp(3.6rem, 5.8vw, 7rem); line-height: .8; }
+main[data-page="studio"] .metric:nth-child(1) strong, main[data-page="studio"] .metric:nth-child(4) strong { font-family: var(--mono); font-size: clamp(2.9rem, 4.6vw, 5.6rem); font-weight: 400; }
+main[data-page="studio"] .metric:nth-child(2) strong { font-family: var(--serif); font-style: italic; font-size: clamp(4rem, 6vw, 7.5rem); }
+main[data-page="studio"] .metric:nth-child(3) strong { font-family: var(--sans); font-size: clamp(4rem, 6.7vw, 8rem); font-weight: 500; letter-spacing: -.1em; }
+.metric span { max-width: 14ch; font-size: .59rem; line-height: 1.55; }
+.studio-slice .copy { padding: clamp(3rem, 8vw, 9rem) clamp(2rem, 8vw, 11rem); }
+.studio-slice h2 { max-width: 8.5ch; }
+.cta { padding-block: clamp(7rem, 13vw, 14rem); }
+.cta h2 { font-weight: 600; }
+.footer { padding: clamp(2rem, 3vw, 3.5rem) var(--edge); }
+
+/* Page-specific editorial scales. */
+.page-head { padding: clamp(5.5rem, 9vw, 10rem) var(--edge) clamp(2.5rem, 4vw, 4.5rem); }
+.page-head h1 { font-weight: 600; }
+.page-head p { font-size: 1rem; line-height: 1.6; }
+.filters { padding-inline: var(--edge); gap: clamp(1rem, 2vw, 2rem); }
+.all-projects { padding-top: clamp(4rem, 7vw, 8rem); }
+.detail-hero { padding: clamp(1rem, 3vw, 3.5rem) var(--edge); }
+.detail-title h1 { font-weight: 600; }
+.detail-intro, .detail-story { padding: clamp(5rem, 9vw, 10rem) max(var(--edge), 12vw); }
+.detail-story h2, .materials h2 { font-size: clamp(3rem, 5vw, 5.8rem); }
+.project-facts .fact { min-height: 11rem; padding: clamp(1.35rem, 2vw, 2.5rem) var(--edge); display: flex; flex-direction: column; justify-content: space-between; }
+.fact b { font-family: var(--sans); font-size: clamp(1.1rem, 1rem + .25vw, 1.5rem); font-weight: 500; }
+.fact:nth-child(2) b { font-family: var(--mono); letter-spacing: -.08em; }
+.fact:nth-child(3) b { font-family: var(--serif); font-size: clamp(1.45rem, 1.2rem + .4vw, 2rem); }
+.gallery { padding: clamp(1rem, 3vw, 3.5rem) var(--edge); }
+.materials { padding-inline: var(--edge); }
+.contact-layout { padding: clamp(5rem, 9vw, 10rem) max(var(--edge), 9vw); }
+.contact-layout h1 { font-weight: 600; }
+
+@media (max-width: 700px) {
+  :root { --edge: 1.15rem; --section-space: 5.8rem; }
+  body { font-size: .95rem; overflow-x: hidden; }
+  .header { height: 64px; position: sticky; top: 0; }
+  .brand { white-space: nowrap; }
+  .brand sup { font-size: .37rem; margin-left: .2rem; }
+  .menu-toggle { min-width: 3.7rem; min-height: 44px; text-align: right; }
+  .nav { inset: 64px 0 auto; padding: 1.5rem var(--edge) 2.4rem; gap: 1rem; border-bottom: 1px solid rgba(244,240,232,.25); }
+  .nav a { font-family: var(--serif); font-size: clamp(2rem, 9vw, 2.8rem); line-height: 1; letter-spacing: -.055em; text-transform: none; }
+  .hero { min-height: calc(100svh - 64px); padding: 1rem var(--edge); }
+  .hero-media { inset: 1rem var(--edge); height: auto; top: 1rem; bottom: 1rem; }
+  .hero-copy { left: calc(var(--edge) + .1rem); bottom: 3.2rem; max-width: calc(100% - 2.3rem); text-shadow: 0 2px 18px rgba(29,29,26,.38); }
+  .hero h1 { font-size: clamp(3.85rem, 17vw, 5.4rem); max-width: 6.5ch; }
+  .hero .eyebrow { font-size: .55rem; margin-bottom: .85rem; }
+  .hero-caption { display: block; position: absolute; right: calc(var(--edge) + .1rem); bottom: 1.35rem; z-index: 2; color: var(--paper); font-size: .5rem; }
+  section { padding: var(--section-space) var(--edge); }
+  .manifesto { padding-block: 6.5rem; }
+  .manifesto h2, .approach h2, .about-grid h2 { font-size: clamp(2.8rem, 12vw, 4.2rem); line-height: .91; }
+  .manifesto p { margin-top: 1.6rem; }
+  .section-top { margin-bottom: 2rem; }
+  .section-top .text-link { margin-top: 1.1rem; }
+  .project-card, .project-card:nth-child(2), .project-card:nth-child(3) { margin-bottom: 4.2rem; }
+  .project-card .media { height: min(112vw, 33rem); }
+  .project-meta { margin-top: .7rem; gap: 1rem; font-size: .55rem; }
+  .project-name { font-size: 1.8rem; }
+  .services { padding-block: 4.8rem; }
+  .service { grid-template-columns: 2rem 1fr; gap: .6rem; padding-block: 1.2rem; }
+  .service span { align-self: start; padding-top: .35rem; font-size: .55rem; }
+  .service h3 { font-size: clamp(2.15rem, 10vw, 3.5rem); }
+  .approach { gap: 3.5rem; }
+  .steps { margin-top: 0; }
+  .step { grid-template-columns: 2rem 1fr; padding-block: 1.3rem; }
+  .step h3 { font-size: 1.2rem; margin-bottom: .45rem; }
+  .step p { font-size: .9rem; }
+  .numbers { grid-template-columns: 1.1fr .9fr; }
+  .metric { min-height: 12.2rem; padding: 1.35rem var(--edge); }
+  .metric strong { font-size: 3.5rem; }
+  main[data-page="home"] .metric:nth-child(1) strong { font-size: 5.2rem; }
+  main[data-page="home"] .metric:nth-child(2) strong { font-size: 4.3rem; }
+  main[data-page="home"] .metric:nth-child(3) strong { font-size: 3rem; }
+  main[data-page="home"] .metric:nth-child(4) strong { font-size: 4.3rem; }
+  .metric span { font-size: .51rem; }
+  .studio-slice .copy { padding: 4rem var(--edge) 5rem; gap: 3rem; }
+  .studio-slice h2 { font-size: clamp(3rem, 13vw, 4.3rem); }
+  .cta { padding-block: 7rem; }
+  .cta h2 { font-size: clamp(3.6rem, 15vw, 5.6rem); }
+  .footer { padding-block: 2.5rem; gap: 3.6rem; }
+  .footer-brand { font-size: 3.3rem; }
+  .footer-links { grid-template-columns: 1fr 1fr; gap: .9rem; }
+  .footer-bottom { margin-top: 0; font-size: .55rem; }
+  .page-head { padding-top: 5.2rem; padding-bottom: 2.6rem; }
+  .page-head h1 { font-size: clamp(3.7rem, 15vw, 5.5rem); }
+  .page-head p { margin-top: 1.75rem; font-size: .95rem; }
+  .filters { gap: 1.5rem; padding-block: 1.05rem; }
+  .filter { font-size: .58rem; flex: 0 0 auto; }
+  .all-projects { padding-top: 3.5rem; }
+  .all-projects .project-card, .all-projects .project-card:nth-child(2), .all-projects .project-card:nth-child(3) { margin-bottom: 4rem; }
+  .all-projects .project-card .media { height: min(110vw, 34rem); }
+  .detail-hero { padding-top: 1rem; }
+  .detail-hero .image { min-height: 65svh; height: 65svh; }
+  .detail-title { padding-top: 1.5rem; }
+  .detail-title h1 { font-size: clamp(3.7rem, 16vw, 5.4rem); }
+  .detail-title div { font-size: .58rem; }
+  .detail-intro, .detail-story { padding: 5.5rem var(--edge); }
+  .detail-intro h2 { font-size: clamp(2.65rem, 11.5vw, 4rem); }
+  .detail-intro p { margin-top: 1.2rem; font-size: 1rem; }
+  .project-facts { grid-template-columns: 1fr 1fr; }
+  .project-facts .fact { min-height: 8.2rem; padding: 1.15rem var(--edge); }
+  .fact b { font-size: 1rem; }
+  .gallery { padding: 1rem var(--edge) 3rem; }
+  .gallery figure, .gallery figure:nth-child(n) { height: 78vw; margin-bottom: 1rem; }
+  .gallery figure:nth-child(1) { height: 118vw; }
+  .detail-story { gap: 2.6rem; }
+  .detail-story h2, .materials h2 { font-size: clamp(2.8rem, 12vw, 4.15rem); }
+  .materials { padding-block: 5.5rem; gap: 2.8rem; }
+  .material-list div { padding-block: 1.1rem; }
+  .contact-layout { padding: 5.2rem var(--edge) 6rem; }
+  .contact-layout h1 { font-size: clamp(3.8rem, 15vw, 5.2rem); }
+  .contact-info { margin-top: 2.5rem; }
+  .contact-info a { font-size: 1.3rem; }
+  .form { gap: 1.45rem; }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  :root { --edge: 2.25rem; --section-space: 7rem; }
+  .hero h1 { font-size: clamp(5.6rem, 10vw, 7.2rem); }
+  .project-card .media { height: 54vw; }
+  .detail-intro, .detail-story { padding-inline: 9vw; }
+  .contact-layout { padding-inline: 7vw; }
+}
