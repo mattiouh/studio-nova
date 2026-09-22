@@ -5,7 +5,7 @@ import './performance.css';
 
 const images={
   casa:'/images/casa', villa:'/images/villa', lake:'/images/lake', hotel:'/images/hotel', office:'/images/office',
-  stone:'/images/stone', detail:'/images/detail', portrait1:'/images/portrait1', portrait2:'/images/portrait2', portrait3:'/images/portrait3'
+  stone:'/images/stone', detail:'/images/detail', portrait1:'/images/portrait-1', portrait2:'/images/portrait-2', portrait3:'/images/portrait-3'
 };
 const projects=[
  {id:'casa-sole',name:'Casa Sole',type:'Residential',place:'Puglia, IT',year:'2025',area:'420 m²',image:images.casa,concept:'Una casa affacciata sul mare, costruita con ombra, pietra e silenzio.',challenge:'Portare freschezza e privacy a una residenza esposta al sole del Salento.',solution:'Una sequenza di corti, setti profondi e aperture calibrate lascia entrare il paesaggio senza lasciar entrare l’eccesso.',materials:['Pietra di Trani','Rovere fumé','Intonaco a calce','Ottone brunito']},
