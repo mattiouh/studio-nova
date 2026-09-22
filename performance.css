@@ -1,0 +1,16 @@
+/* Local, responsive art direction: no remote background-image downloads. */
+.studio-slice .image { background-image: url('/images/lake-640.webp'); }
+.about-image { background-image: url('/images/villa-640.webp'); }
+
+@media (min-width: 701px) {
+  .studio-slice .image { background-image: url('/images/lake-1024.webp'); }
+  .about-image { background-image: url('/images/villa-1024.webp'); }
+}
+
+@media (min-width: 1200px) {
+  .studio-slice .image { background-image: url('/images/lake-1600.webp'); }
+  .about-image { background-image: url('/images/villa-1600.webp'); }
+}
+
+/* Defer below-the-fold layout/paint while reserving a stable visual area. */
+main > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: auto 900px; }

@@ -1,18 +1,11 @@
 import './styles.css';
 import './enhancements.css';
 import './art-direction.css';
+import './performance.css';
 
 const images={
-  casa:'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85',
-  villa:'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85',
-  lake:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85',
-  hotel:'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85',
-  office:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85',
-  stone:'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=85',
-  detail:'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=85',
-  portrait1:'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85',
-  portrait2:'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85',
-  portrait3:'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85'
+  casa:'/images/casa', villa:'/images/villa', lake:'/images/lake', hotel:'/images/hotel', office:'/images/office',
+  stone:'/images/stone', detail:'/images/detail', portrait1:'/images/portrait1', portrait2:'/images/portrait2', portrait3:'/images/portrait3'
 };
 const projects=[
  {id:'casa-sole',name:'Casa Sole',type:'Residential',place:'Puglia, IT',year:'2025',area:'420 m²',image:images.casa,concept:'Una casa affacciata sul mare, costruita con ombra, pietra e silenzio.',challenge:'Portare freschezza e privacy a una residenza esposta al sole del Salento.',solution:'Una sequenza di corti, setti profondi e aperture calibrate lascia entrare il paesaggio senza lasciar entrare l’eccesso.',materials:['Pietra di Trani','Rovere fumé','Intonaco a calce','Ottone brunito']},
@@ -25,7 +18,7 @@ const projects=[
 const page=()=>new URLSearchParams(location.search).get('page')||'home';
 const project=()=>projects.find(p=>p.id===new URLSearchParams(location.search).get('project'))||projects[0];
 const link=(label,p='home',cls='')=>`<a class="${cls}" href="/?page=${p}">${label}</a>`;
-const image=(src,alt,cls='')=>{const base=src.replace(/w=\d+/,'w=');return `<img class="${cls}" src="${src}" srcset="${base}800 800w, ${base}1200 1200w, ${base}1800 1800w" sizes="(max-width: 700px) 95vw, 60vw" alt="${alt}" loading="lazy" decoding="async">`};
+const image=(src,alt,cls='')=>`<img class="${cls}" src="${src}-1024.webp" srcset="${src}-640.webp 640w, ${src}-1024.webp 1024w, ${src}-1600.webp 1600w" sizes="(max-width: 700px) 95vw, (max-width: 1024px) 60vw, 45vw" alt="${alt}" loading="lazy" decoding="async">`;
 
 function header(){const p=page();document.querySelector('#site-header').innerHTML=`<a href="/" class="brand" aria-label="STUDIO NÒVA home">STUDIO NÒVA<sup>EST. 2012</sup></a><button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" class="nav" aria-label="Navigazione principale">${link('Progetti','projects',p==='projects'?'active':'')}${link('Servizi','services',p==='services'?'active':'')}${link('Studio','studio',p==='studio'?'active':'')}${link('Contatti','contact',p==='contact'?'active':'')}</nav>`;document.querySelector('.menu-toggle').onclick=e=>{let n=document.querySelector('.nav');n.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',n.classList.contains('open'))}}
 function footer(){document.querySelector('#site-footer').innerHTML=`<div class="footer"><div class="footer-main"><div><div class="footer-brand">STUDIO NÒVA</div><p>Architecture & interiors<br>Milano · Roma · ovunque serva.</p></div><div class="footer-links">${link('Progetti','projects')}${link('Servizi','services')}${link('Studio','studio')}${link('Contatti','contact')}<a href="#">Instagram ↗</a><a href="#">LinkedIn ↗</a></div></div><div class="footer-bottom"><span>© 2026 Studio Nòva</span><span>Independent concept / Portfolio project</span><span>Designed & developed by ByPalombi</span></div></div>`}
